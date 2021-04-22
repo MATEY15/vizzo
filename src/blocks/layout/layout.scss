@@ -1,0 +1,23 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.layout {
+  max-width: 1260px;
+  width: 100%;
+  @include margin-auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &--large {
+    max-width: 1050px;
+  }
+  &--small {
+    max-width: 830px;
+  }
+}
+
+.row>* {
+  padding-left: 10px;
+  padding-right: 10px;
+}

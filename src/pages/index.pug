@@ -1,0 +1,43 @@
+extends ../templates/main
+
+include ../blocks/content-section/content-section
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+block content
+    .animate-wrapper#animate-wrapper
+        include ../blocks/preview-materials/preview-materials
+        include ../blocks/tab-materials/tab-materials
+
+        section.third-scroll-section
+            include ../blocks/slider-section/slider-section
+            section.slider-section
+                .slider-section__wrapper(style="background-image: url(../src/blocks/slider-section/assets/img/slider2.jpg)")
+                    .layout.layout--large
+                        .heading.heading--center.heading--white
+                            .heading__title How our clients benefit from xTex#[sup ™]
+                        .slider-section__main
+                            .slider-section__item
+                                .slider-section__title
+                                    h3 The adidas story
+                                .slider-section__desc
+                                    p The trend for fashion brands is using CAD to create product concepts and to visualize their materials.
+                                    a(href="#") Check out the adidas 3d design process
+                            .slider-section__item
+                                .slider-section__title
+                                    h3 Interior Design
+                                .slider-section__desc
+                                    p Apply various kinds of digital materials to your interior design products, consistently using real-life textures on your 3d models.
+                        .slider-section__navigate
+            include ../blocks/clients/clients
+            +content-section("../src/blocks/content-section/assets/img/content-section1.jpg", "className")
+                h3 Start #[br] digitizing
+                p From services to on-site solutions, we have a digitization process that will work for you.
+                p
+                    a(href="#") See our solutions
+                p Please contact us for a tailored system quote.
+                a(href="#").button.button--border Get in touch
+            +footer()
+                //| Ready to start your 3D journey? Follow us.

@@ -1,0 +1,98 @@
+@import "../../libs/scss/mixins";
+//@import "../../blocks/grid/grid";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --white-color: #fff;
+  --black-color: #1c1c1c;
+  --green-color: #00bfbf;
+  --gray-light-color: #f9f9f9;
+  --gray-middle-color: #e1ddd7;
+  --gold-color: #f0b46c;
+  --gold-light-color: #B0A192;
+  --blue-dark-color: #151723;
+}
+
+::selection {
+  background: #ccc;
+  color: #4f4c66;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  //transition: all 200ms ease-in;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @include fr();
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: none;
+  margin: 0;
+  color: var(--black-color);
+  overflow-x: hidden;
+
+  @include table-large-screen {
+    padding-top: 70px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+b {
+  @include fr();
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+.link {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--green-color);
+}
+
+h3, .h3 {
+  @include fr();
+  //@include offset(font-size, 16px, 24px, 768px, 1024px);
+  //@include offset(line-height, 22px, 34px, 768px, 1024px);
+}
+
+.height120 {
+  @include offset(height, 50px, 120px, 768px, 1024px);
+}
+.height100 {
+  @include offset(height, 50px, 100px, 768px, 1024px);
+}
+.height-80 {
+  @include offset(height, 40px, 80px, 768px, 1024px);
+}
+

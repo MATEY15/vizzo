@@ -1,0 +1,53 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.menu-page {
+  list-style: none;
+  margin-bottom: 40px;
+
+  &--center {
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    &:not(:last-child) {
+      @include offset(margin-right, 20px, 50px, 768px, 1024px);
+    }
+    &:hover {
+      a {
+        color: #FFFFFF;
+      }
+      &:before {
+        height: 100%;
+        width: calc(100% + 30px);
+      }
+    }
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      content: '';
+      width: 100%;
+      height: 4px;
+      border-radius: 10px;
+      background-color: #0fc9d0;
+      @include trn(.08s);
+      transform: translate(-50%, 0);
+    }
+  }
+
+  a {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: #00bfbf;
+    padding: 9px 0;
+    display: inline-block;
+    @include trn(.1s);
+  }
+}

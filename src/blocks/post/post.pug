@@ -1,0 +1,29 @@
+mixin postFull(src, addClass)
+    .post.post--full(class=addClass style="background-image: url("+src+")")
+        if(!block)
+            .post__content
+                h4.post__subtitle Case study
+                h3.post__title The adidas story
+                p.post__text The trend for fashion brands is using CAD to create product concepts and to visualize their materials.
+                a(href="#").post__link Check out the adidas 3d design process
+        else
+            .post__content
+                block
+
+mixin post(src, addClass, imageClass)
+    .post.post--preview(class=addClass)
+        if(!block)
+            .post__content
+                h4.post__subtitle Case study
+                h3.post__title The adidas story
+                p.post__text The trend for fashion brands is using CAD to create product concepts and to visualize their materials.
+                a(href="#").post__link Check out the adidas 3d design process
+            .post__image(class=imageClass)
+                if(src)
+                    +img(src)
+        else
+            .post__content
+                block
+            .post__image(class=imageClass)
+                if(src)
+                    +img(src)

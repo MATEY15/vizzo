@@ -1,0 +1,28 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.grid {
+  display: flex;
+  .row {
+    margin: 0 -10px;
+  }
+  .col {
+    padding: 0 10px;
+  }
+}
+
+//// Grid
+//
+//$columnGrid: 12;
+//
+//@mixin grid($name) {
+//
+//  @for $i from 1 through $columnGrid {
+//    .#{$name}-#{$i} {
+//      width: calc(100% / #{$columnGrid} * #{$i});
+//    }
+//  }
+//}
+//
+//@include grid(colm);

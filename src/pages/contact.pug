@@ -1,0 +1,115 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/content-section/content-section
+include ../blocks/post/post
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/header-content/assets/img/background-contact.jpg")
+        h4.header-content__slogan Contact
+        h1.header-content__title Tranform your #[br] business with Vizoo
+        p.header-content__desc A short page description in a few lines of text. A short page description in a few lines of text.
+    .height100
+    section.section.contact
+        .layout.layout--small
+            .heading
+                .heading__title Get in touch for a demo,#[br] a personal offer or a coffee chat
+            .contact__wrapper
+                .contact__item.contact__col-6
+                    select.select-main
+                        option Reason for contact
+                        option Reason for contact 1
+                        option Reason for contact 2
+                        option Reason for contact 3
+                .contact__item.contact__col-6
+                .contact__item.contact__col-6
+                    +input("First name", "text")
+                .contact__item.contact__col-6
+                    +input("Last name", "text")
+                .contact__item.contact__col-8
+                    +input("Email", "text")
+                .contact__item.contact__col-4
+                    +input("Country", "text")
+
+                .contact__item.contact__br
+
+                .contact__item.contact__col-4
+                    select.select-main
+                        option Select industry
+                        option Select industry 1
+                        option Select industry 2
+                        option Select industry 3
+                .contact__item.contact__col-4
+                    +input("Company", "text")
+                .contact__item.contact__col-4
+                    +input("Job position", "text")
+
+                .contact__item.contact__col-12
+                    +textarea("Your message")
+                .contact__item.contact__col-6
+                    select.select-main
+                        option How did you hear about Vizoo?
+                        option Select industry 1
+                        option Select industry 2
+                        option Select industry 3
+                .contact__item.contact__br
+
+                .contact__item.contact__col-12
+                    +checkInput()
+                        span By using this form you agree with the storage and handling of your data by Vizoo in accordance with our #[a(href="#").link privacy policy].
+                .contact__item.contact__col-12
+                    button.button.button--border Send message
+
+    section.section.section__full-offset.section__post
+        .layout.layout--large
+            .heading.heading--offset-small
+                .heading__title Visit our resellers
+            .menu-page.menu-page--center
+                +listLink("America", "#")
+                +listLink("Asia", "#")
+                +listLink("Europe", "#")
+
+            .post__wrapper
+                +post("../src/blocks/post/assets/img/post-icon1.png", "post--small post--offset-small", "post__image--small")
+                    h4.post__subtitle Germany
+                    h3.post__title Assyst GmbH
+                    a(href="#").post__link Go to human-solutions.com
+
+                +post("", "post--small post--offset-small")
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    a(href="#").post__link Click this link
+
+                +post("", "post--small post--offset-small")
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    a(href="#").post__link Click this link
+
+                +post("", "post--small post--offset-small")
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    a(href="#").post__link Click this link
+
+                +post("", "post--small post--offset-small")
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    a(href="#").post__link Click this link
+
+                +post("", "post--small post--offset-small")
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    a(href="#").post__link Click this link
+
+    +content-section("../src/blocks/content-section/assets/img/content-section3.jpg", "className")
+        h3 Vizoo#[br] Customer#[br] Portal
+        p Access our customer area with hundreds of video tutorial, extensive 3D courses, a vast knowledge base and direct link to our fantastic and friendly support team.
+        p
+            a(href="#") Log in
+
+    +footer()
+        | We've got even more to tell. Follow us.

@@ -1,0 +1,32 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.image-default {
+  position: relative;
+  display: inline-block;
+
+  @include mobile-big-screen {
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    max-width: 100%;
+
+    &--absolute {
+      position: absolute;
+      bottom: -40px;
+      right: -45px;
+      @include table-small-screen {
+        width: 25vw;
+      }
+      @include mobile-big-screen {
+        width: 40vw;
+      }
+      @include mobile-large-screen {
+        bottom: -20px;
+        right: -10px;
+      }
+    }
+  }
+}

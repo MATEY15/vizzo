@@ -1,0 +1,7 @@
+mixin productCircle(src, buttonText)
+    .product-circle
+        .product-circle__image-wrapper
+            +img(src, "product-circle__image")
+        .product-circle__content
+            if(buttonText !== undefined)
+                a(href="#").button.button--border= buttonText

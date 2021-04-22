@@ -1,0 +1,21 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section {
+  overflow: hidden;
+
+  &__full-offset {
+    @include offset(padding-top, 50px, 100px, 768px, 1024px);
+    @include offset(padding-bottom, 60px, 120px, 768px, 1024px);
+  }
+
+  &--offset-top {
+    @include offset(padding-top, 50px, 100px, 768px, 1024px);
+  }
+
+  &--offset-bottom {
+    @include offset(padding-bottom, 60px, 120px, 768px, 1024px);
+  }
+
+}

@@ -1,0 +1,222 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+@import "~select2/dist/css/select2.css";
+// npm i select2 --save
+
+
+// Default style select
+
+.select2-container--default {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+  width: 100%;
+  min-height: 40px;
+  border-radius: 10px;
+  border: 1px solid #00bfbf;
+  padding-right: 40px;
+}
+
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  //display: flex;
+  //align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #00bfbf;
+  padding: 5px 0 5px 11px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+
+  &:before {
+    content: '';
+    width: 20px;
+    height: 11px;
+    display: block;
+    background-image: url(/images/icons/arrow-bottom.svg);
+    background-repeat: no-repeat;
+  }
+
+  b {
+    display: none;
+  }
+}
+
+// Drop Container
+
+.select2-results__option--selectable {
+  font-size: 16px;
+  color: #333;
+  min-height: 40px;
+  border-bottom: solid 1px #e6e6e6;
+  padding: 8px 11px;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: #fff;
+  &:before {
+    background: #00bfbf;
+  }
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: transparent;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  color: #00bfbf;
+  @include trn(.25s);
+}
+
+.order-cake__input-style {
+  .select2-container--default {
+    width: 100% !important;
+  }
+}
+
+.select2-container,
+.sort-select {
+  outline: none;
+}
+
+.sort-select + .select2-container * {
+  outline: none !important;
+}
+
+
+
+.select2-dropdown {
+  border: 1px solid #e6e6e6;
+}
+
+
+.drop-select--wrap .select2-results__option {
+  font-size: 14px;
+  color: #6d7382;
+  padding: 5px 15px;
+}
+
+.select-option__main {
+  max-width: 560px;
+}
+
+.select-option {
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #153257;
+    margin-bottom: 20px;
+
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #F7F8FF;
+    border-radius: 10px;
+    padding: 30px 40px 50px;
+    min-height: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @include table-large-screen {
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      max-width: 240px;
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      left: 50%;
+      @include tt(-50%, 0);
+      background: #4637A5;
+      filter: blur(20px);
+      display: none;
+      z-index: -1;
+    }
+
+    &--active {
+      background: #FFFFFF;
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+      border-radius: 25px;
+      &:before {
+        display: block;
+      }
+    }
+  }
+
+  &__item-name {
+    @include fr();
+    font-size: 20px;
+    line-height: 26px;
+    padding-bottom: 20px;
+    color: #153257;
+    text-align: center;
+    border-bottom: 2px solid #E7EBF9;
+  }
+
+  &__item-content {
+
+  }
+
+  &__item-price {
+    display: flex;
+    justify-content: center;
+    span {
+      position: relative;
+      display: inline-block;
+      top: 12px;
+      font-size: 30px;
+      line-height: 36px;
+      color: rgba(117, 99, 188, 0.5);
+      margin-right: 10px;
+    }
+    p {
+      font-size: 60px;
+      line-height: 72px;
+      text-align: center;
+      color: #4637A5;
+    }
+  }
+  &__item-button {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+
+.card-icons {
+  display: flex;
+  align-items: baseline;
+
+  &__item {
+    margin-right: 10px;
+  }
+}

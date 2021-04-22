@@ -1,0 +1,46 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.input {
+  position: relative;
+  min-height: 40px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 10px 12px;
+  @include fr();
+  font-size: 14px;
+  color: #859ea3;
+
+  @include placeholder() {
+    font-size: 14px;
+    color: #859ea3;
+  }
+
+  &__item {
+
+  }
+
+}
+
+.textarea {
+  position: relative;
+  min-height: 300px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 10px 12px;
+  @include fr();
+  font-size: 14px;
+  color: #859ea3;
+
+  @include placeholder() {
+    font-size: 14px;
+    color: #859ea3;
+  }
+
+  @include mobile-large-screen {
+    min-height: 150px;
+  }
+}

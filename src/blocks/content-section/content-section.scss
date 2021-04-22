@@ -1,0 +1,40 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.content-section {
+  display: flex;
+  align-items: center;
+  @include offset(min-height, 400px, 700px, 768px, 1024px);
+  @include offset(padding-top, 50px, 100px, 768px, 1024px);
+  @include offset(padding-bottom, 50px, 100px, 768px, 1024px);
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  &__text {
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, .25);
+    margin-bottom: 20px;
+    h3 {
+      text-shadow: 0 0 20px rgba(0, 0, 0, .25);
+      @include fr();
+      font-size: 40px;
+      line-height: 47px;
+      font-weight: 500;
+      letter-spacing: .2px;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 18px;
+      text-shadow: 0 0 20px rgba(0, 0, 0, .25);
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    a {
+      font-size: 18px;
+      color: #00bfbf;
+    }
+  }
+}

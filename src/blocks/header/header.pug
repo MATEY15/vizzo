@@ -1,0 +1,20 @@
+header.header
+    .layout.header__wrapper
+        a(href="#").logo
+            +img("src/blocks/header/assets/img/logo.svg", "logo__image", "Logo")
+        .header__main
+            .header__menu
+                ul.menu
+                    +listLink('Home', 'home.html', "active")
+                    +listLink('Solutions', 'solutions.html')
+                    +listLink('Stories', 'stories.html')
+                    +listLink('Company', 'company.html')
+                    +listLink('Partner', 'partner.html')
+                    +listLink('Contact', 'contact.html')
+            .header__button-wrapper
+                .language
+                    a(href="#").language__link.language__link--active EN
+                    a(href="#").language__link 中文
+                .header__button
+                    a(href="#").button.button--border Get in touch
+                include ../burger-menu/burger-menu

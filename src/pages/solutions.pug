@@ -1,0 +1,60 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/content-default/content-default
+include ../blocks/image-default/image-default
+include ../blocks/content-section/content-section
+include ../blocks/product-circle/product-circle
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/header-content/assets/img/header-background1.jpg")
+        h4.header-content__slogan Solutions
+        h1.header-content__title Individual businesses #[br] need #[b distinct solutions]
+    .height120
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper
+                .content-default__item
+                    +contentDefault()
+                        h3.content-default__title xTex™ digitization technology
+                        p.content-default__desc Regardless of the size of your #[br] sample material, Vizoo scanners #[br] lend themselves to  perfectly capture materials with unprecedented accuracy and speed.
+                        a(href="#").link Explore xTex™
+                .content-default__item
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image1.jpg")
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper.content-default__wrapper--revers
+                .content-default__item.content-default__item--5
+                    +contentDefault("content-default__offset-left")
+                        h3.content-default__title Material digitization service
+                        p.content-default__desc We are proud to offer versatile digitization services that are fast and reliable for material loads up to 5000 samples.
+                        a(href="#").link Learn about our digitzation service
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image2.jpg")
+                        img(src="../src/blocks/content-default/assets/img/content-default--image2-1.jpg" alt="Image Preview").image-default__img.image-default__img--absolute
+
+    +content-section("../src/blocks/content-section/assets/img/content-section2.jpg", "className")
+        h3 Digital#[br] transformation
+        p We are leading experts in material digitzation technology and would love to guide you through the digital transformation of your business.
+        p
+            a(href="#") Our consulting services
+
+    section.section.section__full-offset
+        .layout.layout--large
+            .heading.heading--center
+                .heading__title Choose what is right for you
+            .product-circle__wrapper
+                .product-circle__item
+                    +productCircle("../src/blocks/product-circle/assets/img/product-circle1.jpg", "xTex™ technology")
+                .product-circle__item
+                    +productCircle("../src/blocks/product-circle/assets/img/product-circle2.jpg", "Digitzation service")
+                .product-circle__item
+                    +productCircle("../src/blocks/product-circle/assets/img/product-circle3.jpg", "Consulting")
+
+    +footer()
+        | Let’s get in touch.

@@ -1,0 +1,34 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.header-content {
+  @include offset(min-height, 440px, 650px, 540px, 1024px);
+  color: #ffffff;
+  @include offset(padding-top, 40px, 100px, 540px, 1024px);
+  @include offset(padding-bottom, 30px, 40px, 540px, 1024px);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  &__slogan {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    &--green {
+      color: var(--green-color);
+    }
+  }
+  &__title {
+    @include offset(font-size, 34px, 65px, 540px, 1024px);
+    @include offset(line-height, 44px, 84px, 540px, 1024px);
+    font-weight: 300;
+    letter-spacing: 1.6px;
+  }
+  &__desc {
+    @include offset(font-size, 22px, 28px, 540px, 1024px);
+    font-weight: 300;
+    letter-spacing: 0.14px;
+    @include offset(margin-top, 14px, 20px, 540px, 1024px);
+    max-width: 505px;
+  }
+}

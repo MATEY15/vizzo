@@ -1,0 +1,10 @@
+mixin headerContent(src)
+    section.header-content(style="background-image: url("+src+")")
+        .layout
+            .header-content__wrapper
+                if(!block)
+                    h4.header-content__slogan.header-content__slogan--green Text Slogan
+                    h1.header-content__title Name text preview
+                    p.header-content__desc Our modular xTex solution is available #[br] in 3 packages to perfectly fit #[br] to your workflow
+                else
+                    block

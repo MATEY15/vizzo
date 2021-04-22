@@ -1,0 +1,7 @@
+mixin content-section(src, className)
+    section.content-section(style="background-image: url("+src+")")
+        .layout
+            .row.content-section__wrapper(class=className)
+                .col-lg-3.offset-lg-1
+                    .content-section__text
+                        block

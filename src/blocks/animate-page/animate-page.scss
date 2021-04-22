@@ -1,0 +1,8 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.animate-wrapper {
+  position: fixed;
+  width: 100%;
+}

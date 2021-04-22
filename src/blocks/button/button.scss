@@ -1,0 +1,45 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  outline: 0;
+  white-space: nowrap;
+  @include trn(.2s);
+
+  &--border {
+    min-height: 50px;
+    padding: 15px 25px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--green-color);
+    color: var(--green-color);
+    @include fr();
+    font-size: 18px;
+    font-weight: 500;
+
+    @include mobile-large-screen {
+      font-size: 18px;
+      line-height: 24px;
+      padding: 11px 20px 13px;
+      min-height: 48px;
+    }
+
+    &:hover {
+      color: #fff;
+      background: var(--green-color);
+    }
+  }
+
+}

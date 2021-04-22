@@ -1,0 +1,127 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.post {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    @include offset(margin-bottom, 40px, 100px, 768px, 1024px);
+  }
+
+  &--offset-small {
+    &:not(:last-child) {
+      @include offset(margin-bottom, 20px, 50px, 768px, 1024px);
+    }
+  }
+
+  &--small {
+    min-height: 210px;
+    .post__image {
+      min-height: 210px;
+    }
+  }
+
+  &--full {
+    width: 100%;
+    padding: 30px 105px;
+    color: #fff;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    @include table-small-screen {
+      padding: 30px;
+    }
+    @include mobile-large-screen {
+      padding: 20px;
+    }
+  }
+
+  &--preview {
+    border: 1px solid #859ea3;
+    color: #002b2b;
+
+    @include mobile-big-screen {
+      flex-direction: column-reverse;
+    }
+
+    .post__content {
+      padding: 30px 20px 30px 105px;
+      width: 100%;
+      @include table-small-screen {
+        padding: 30px 20px 30px 30px;
+      }
+      @include mobile-large-screen {
+        padding: 20px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    min-width: 295px;
+    max-width: 295px;
+    height: 100%;
+    min-height: 300px;
+    font-size: 0;
+    background: #cedde0;
+    flex: 1;
+
+    @include mobile-big-screen {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    img {
+      position: absolute;
+      @include absolute-fill();
+      object-fit: cover;
+    }
+  }
+
+  &__image--small {
+    display: flex;
+    min-height: 210px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+    img {
+      position: relative;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__content {
+    max-width: 714px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    @include offset(font-size, 28px, 40px, 768px, 1024px);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #00bfbf;
+  }
+}

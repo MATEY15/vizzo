@@ -1,0 +1,8 @@
+mixin contentDefault(addClass)
+    .content-default(class=addClass)
+        if(!block)
+            h3.content-default__title Title text
+            p.content-default__desc Description text
+            a(href="#").link Explore xTex™
+        else
+            block

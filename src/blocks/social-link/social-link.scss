@@ -1,0 +1,25 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.socials__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  a:hover {
+    opacity: .7;
+  }
+
+  li, a {
+    line-height: 0;
+    @include trn(.2s);
+  }
+  li:not(:last-child) {
+    margin-right: 15px;
+    @include mobile-large-screen {
+      margin-right: 10px;
+    }
+  }
+}

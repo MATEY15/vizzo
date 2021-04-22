@@ -1,0 +1,76 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.heading {
+  @include offset(margin-bottom, 40px, 100px, 540px, 1024px);
+  color: #002b2b;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--white {
+    color: #ffffff;
+  }
+
+  &--offset-small {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @include fr();
+    @include offset(font-size, 28px, 40px, 768px, 1024px);
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 22px;
+    line-height: 1.32;
+    //@include font-size(18px, 22px, 540px, 1024px);
+    //@include line-height(24px, 29px, 540px, 1024px);
+    letter-spacing: -1px;
+    color: #000000;
+    text-align: center;
+    max-width: 800px;
+    margin: 15px auto 0;
+    @include mobile-large-screen {
+      margin: 10px auto 0;
+    }
+
+    @media (max-width: 854px) {
+      br {
+        display: none;
+      }
+    }
+
+    a {
+      position: relative;
+      color: #000;
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #000;
+        transition: all .2s ease-out;
+      }
+      &:hover {
+        &:before {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  //&__content {
+  //  @include offset(padding-top, 32px, 78px, 540px, 1024px);
+  //}
+
+}
+

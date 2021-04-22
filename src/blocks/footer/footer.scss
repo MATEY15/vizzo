@@ -1,0 +1,80 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.footer {
+  @include offset(padding-top, 60px, 120px, 768px, 1024px);
+  @include offset(padding-bottom, 60px, 120px, 768px, 1024px);
+
+  &__title {
+    @include fr();
+    @include offset(font-size, 30px, 40px, 768px, 1024px);
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #002b2b;
+    margin-bottom: 50px;
+
+    @include mobile-large-screen {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__contact-wrapper {
+    display: flex;
+    @include mobile-large-screen {
+      display: block;
+    }
+  }
+
+  &__contact-item {
+    width: calc(100% / 12 * 4);
+    @include mobile-large-screen {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__contact-title {
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 0.14px;
+    color: #002b2b;
+    margin-bottom: 37px;
+    @include mobile-large-screen {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__contact-text {
+    font-size: 14px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .socials__menu {
+    @include offset(margin-bottom, 40px, 120px, 768px, 1024px);
+  }
+
+  &__copy {
+    font-size: 18px;
+    color: #002b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @include offset(margin-top, 30px, 100px, 768px, 1024px);
+  }
+
+  &__copy-lists {
+    a {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 500;
+      color: #00bfbf;
+      margin-left: 17px;
+    }
+  }
+
+}

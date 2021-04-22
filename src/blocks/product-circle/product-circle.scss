@@ -1,0 +1,37 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.product-circle {
+  max-width: 250px;
+  text-align: center;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mobile-big-screen {
+      justify-content: space-around;
+    }
+  }
+  &__item {
+    //width: calc(100% / 3);
+    @include mobile-big-screen {
+      padding: 0 10px;
+      margin-bottom: 30px;
+    }
+  }
+  &__image-wrapper {
+    position: relative;
+    @include offset(width, 200px, 250px, 540px, 1024px);
+    @include offset(height, 200px, 250px, 540px, 1024px);
+    @include offset(margin-bottom, 30px, 50px, 540px, 1024px);
+  }
+  &__image {
+    position: absolute;
+    @include absolute-fill();
+    object-fit: cover;
+  }
+
+
+}

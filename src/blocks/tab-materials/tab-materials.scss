@@ -1,0 +1,132 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.tab-materials {
+  //@include offset(padding-top, 50px, 100px, 768px, 1024px);
+  //@include offset(padding-bottom, 60px, 120px, 768px, 1024px);
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__menu-wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+  &__menu {
+    border-right: 1px solid #cedde0;
+    margin-right: 68px;
+    min-height: 400px;
+    @include table-small-screen {
+      margin-right: 25px;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    @include fr();
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 15px;
+    color: #cedde0;
+    height: calc(100% / 3);
+    cursor: pointer;
+    @include trn(.2s);
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: -1px;
+      content: '';
+      height: 100%;
+      width: 5px;
+      background: #00bfbf;
+      @include trn(.2s);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover {
+      color: #002b2b;
+    }
+
+    &--active {
+      color: #002b2b;
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:nth-child(2) {
+      align-items: center;
+    }
+    &:nth-child(3) {
+      align-items: flex-end;
+    }
+
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+  }
+
+  &__slider-item {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include trn(.25s);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(80px);
+
+    @include table-small-screen {
+      flex-direction: column;
+    }
+
+    &--effect {
+      transform: translateX(-80px);
+    }
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0px);
+      @include table-small-screen {
+        position: relative;
+      }
+    }
+  }
+
+  &__content {
+    color: #002b2b;
+    @include fr();
+    min-width: 300px;
+    padding-right: 20px;
+    @include table-small-screen {
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-size: 40px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+      margin-bottom: 31px;
+    }
+    p {
+      font-size: 18px;
+      max-width: 190px;
+    }
+  }
+
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+
+}

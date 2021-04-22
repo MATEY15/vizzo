@@ -1,0 +1,132 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+
+.slider-section {
+  position: relative;
+
+  &__wrapper {
+    @include offset(min-height, 450px, 700px, 768px, 1024px);
+    @include offset(padding-top, 50px, 100px, 768px, 1024px);
+    @include offset(padding-bottom, 60px, 120px, 768px, 1024px);
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    @include mobile-large-screen {
+      padding-bottom: 30px;
+    }
+
+    .layout {
+      @include laptop-large-screen {
+        max-width: 750px;
+      }
+      @include table-small-screen {
+        max-width: 640px;
+      }
+    }
+  }
+
+  &__main {
+    padding-top: 60px;
+
+    @include table-small-screen {
+      padding-top: 0;
+    }
+  }
+
+  &__item {
+    display: flex !important;
+    color: #fff;
+    @include mobile-large-screen {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    max-width: 190px;
+    margin-right: 22px;
+
+    h3 {
+      text-shadow: 0 0 20px rgba(0, 0, 0, .25);
+      @include fr();
+      font-size: 40px;
+      line-height: 47px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  &__desc {
+    max-width: 295px;
+
+    p {
+      @include fr();
+      font-size: 18px;
+      text-shadow: 0 0 20px rgba(0, 0, 0, .25);
+      margin-bottom: 20px;
+    }
+
+    a {
+      @include fr();
+      font-size: 18px;
+      color: #00bfbf;
+    }
+  }
+
+  //&__image {
+  //  position: absolute;
+  //  width: 100%;
+  //  height: 100%;
+  //  object-fit: cover;
+  //}
+
+  &__navigate {
+    @include table-small-screen {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    @include tt(0, -50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #00bfbf;
+    @include brr(50%);
+
+    @include table-small-screen {
+      position: static;
+      top: auto;
+      bottom: 0;
+      @include tt(0, 0);
+    }
+  }
+
+  &__nav--prev {
+    left: 50px;
+    @include table-small-screen {
+      left: 25px;
+    }
+  }
+
+  &__nav--next {
+    right: 50px;
+    @include table-small-screen {
+      right: 25px;
+    }
+
+    svg {
+      transform: scale(-1);
+    }
+  }
+
+}
