@@ -18,6 +18,12 @@
     @include mobile-large-screen {
       margin-bottom: 30px;
     }
+
+    br {
+      @include mobile-large-screen {
+        display: none;
+      }
+    }
   }
 
   &__contact-wrapper {
@@ -74,6 +80,10 @@
       font-weight: 500;
       color: #00bfbf;
       margin-left: 17px;
+      @include trn(.2s);
+      &:hover {
+        color: #5edaf1;
+      }
     }
   }
 

@@ -1,0 +1,127 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+$tableCol: ".table__col";
+
+.table {
+  color: #002b2b;
+  min-width: 480px;
+  &__wrapper {
+    @include mobile-big-screen {
+      overflow-y: hidden;
+      padding-bottom: 25px;
+    }
+  }
+  &__head {
+    display: flex;
+    #{$tableCol} {
+      font-size: 28px;
+      font-weight: 300;
+      text-align: center;
+      padding-top: 25px;
+      padding-bottom: 20px;
+      @include mobile-big-screen {
+        font-size: 18px;
+      }
+      @include mobile-large-screen {
+        font-size: 14px;
+      }
+      &:first-child {
+        width: 28.5%;
+        @include table-large-screen {
+          min-width: 290px;
+        }
+        @include mobile-big-screen {
+          min-width: 170px;
+        }
+      }
+    }
+    .table__col--active {
+      border-top: 1px solid #000000;
+      font-weight: 500;
+    }
+  }
+  &__body {
+    .table__row {
+      &:last-child {
+        .table__col--active {
+          &:before {
+            position: absolute;
+            bottom: -24px;
+            height: 24px;
+            width: calc(100% + 2px);
+            content: "";
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            @include mobile-big-screen {
+              bottom: -15px;
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+    #{$tableCol} {
+      min-height: 60px;
+      font-size: 18px;
+      @include mobile-big-screen {
+        font-size: 16px;
+        min-height: 50px;
+      }
+      @include mobile-large-screen {
+        font-size: 14px;
+      }
+      &:first-child {
+        width: 28.5%;
+        justify-content: flex-start;
+        @include table-large-screen {
+          min-width: 290px;
+        }
+        @include mobile-big-screen {
+          min-width: 170px;
+        }
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    width: 100%;
+    margin: 0 -10px;
+    border-bottom: 1px solid #cedde0;
+    @include table-large-screen {
+      margin: 0;
+    }
+
+  }
+  &__col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 19.3%;
+    padding: 0 10px;
+    &--active {
+      position: relative;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+    }
+    @include table-large-screen {
+      width: 100%;
+    }
+  }
+}
+
+.icon-dash {
+  width: 13px;
+  height: 1px;
+  background: #cedde0;
+}
+
+.icon-check {
+  display: inline-block;
+  width: 28px;
+  height: 39px;
+  background-image: url(assets/img/check.jpg);
+}

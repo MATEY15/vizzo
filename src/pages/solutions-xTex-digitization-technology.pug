@@ -1,0 +1,152 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/video/video
+include ../blocks/content-default/content-default
+include ../blocks/image-default/image-default
+include ../blocks/content-section/content-section
+include ../blocks/product-circle/product-circle
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/header-content/assets/img/header-background4.jpg")
+        h4.header-content__slogan.header-content__slogan--green Solutions
+        h1.header-content__title xTex™ digitization#[br] technology
+        p.header-content__desc Our modular xTex solution is available in 3 packages to perfectly fit to your workflow
+
+    .section.section__full-offset
+        .layout.layout--large
+            .heading.heading--center.heading--offset-large
+                .heading__title Industry-leading digitzation with Vizoo
+            +video("../src/blocks/video/assets/img/video-preview1.jpg", "http://www.youtube.com/watch?v=0O2aH4XLbto")
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper
+                .content-default__item.content-default__item--5
+                    +contentDefault()
+                        h4.content-default__subtitle For small to medium-sized agencies#[br] and fabric mills
+                        h3.content-default__title Basic Workflow
+                        p.content-default__desc Our custom made software works hand in hand with your hardware. Easy set up, lightweight integration for basic prototyping and 3d beginners - the simple way to achieve great results.
+                        a(href="#").link xTex™ Basic Workflow
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image4.jpg")
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper.content-default__wrapper--revers
+                .content-default__item.content-default__item--5
+                    +contentDefault("content-default__offset-left")
+                        h4.content-default__subtitle For best-in-class companies and agencies
+                        h3.content-default__title Professional Workflow
+                        p.content-default__desc Our combined xTex™ Scanner and Software solution offers optimal results for all professional use cases, including high-quality designs for eCommerce.
+                        a(href="#").link xTex™ Basic Workflow
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image5.jpg")
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper
+                .content-default__item.content-default__item--5
+                    +contentDefault()
+                        h4.content-default__subtitle For industry-leading global players
+                        h3.content-default__title Enterprise Workflow
+                        p.content-default__desc We integrate our professional workflow with color managment and physics measurements to fulfill all needs for industry-leading companies.
+                        a(href="#").link xTex™ Basic Workflow
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image6.jpg")
+
+    .section.section__full-offset
+        .layout.layout--large
+            .heading.heading--center.heading--offset-large
+                .heading__title Comparing the xTex™ workflows
+            .table__wrapper
+                .table
+                    .table__head
+                        .table__col
+                        .table__col Basic
+                        .table__col Professional
+                        .table__col Enterprise
+                    .table__body
+                        .table__row
+                            .table__col Color calibration
+                            .table__col
+                                span.icon-dash
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Drape verification
+                            .table__col
+                                span.icon-dash
+                            .table__col
+                                span.icon-dash
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Color verification workflow
+                            .table__col
+                                span.icon-dash
+                            .table__col
+                                span.icon-dash
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col U3M format
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Tiling
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col PBR textures (physically correct)
+                            .table__col
+                                span.icon-dash
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Correct transparency
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Upgradability
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+
+    section.section.section__full-offset
+        .layout.layout--large
+            .heading.heading--center
+                .heading__title Our xTex™ digitization technology
+            .product-circle__wrapper
+                .product-circle__item
+                    +productCircle("../src/blocks/product-circle/assets/img/product-circle4.jpg", "Basic workflow")
+                .product-circle__item
+                    +productCircle("../src/blocks/product-circle/assets/img/product-circle5.jpg", "Professional workflow ")
+                .product-circle__item
+                    +productCircle("../src/blocks/product-circle/assets/img/product-circle6.jpg", "Enterprise workflow")
+
+    +footer()
+        | Let’s get in touch.

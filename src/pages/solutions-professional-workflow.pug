@@ -1,0 +1,203 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/video/video
+include ../blocks/content-default/content-default
+include ../blocks/image-default/image-default
+include ../blocks/content-section/content-section
+include ../blocks/product-circle/product-circle
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/header-content/assets/img/header-background6.jpg")
+        ul.breadcrumbs
+            +listBreadcrumbs("Solutions")
+            +listBreadcrumbs("xTex™ digitization technology")
+        h1.header-content__title Professional#[br] workflow
+        p.header-content__desc Our combined xTex™ Scanner and Software solution offers optimal results for all professional use cases, including high-quality designs for eCommerce.
+
+    .section.section--offset-top
+        .layout.layout--large
+            .heading.heading--offset-small
+                .heading__title The xTex™ Scanners
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper
+                .content-default__item.content-default__item--5
+                    +contentDefault()
+                        h3.content-default__title Scan
+                        p.content-default__desc The xTex™ scanner captures materials with unmatched accuracy and speed and is availble in two sizes: A4 and A2.
+                        a(href="#").link See technical specification (pdf)
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image1.jpg")
+
+    section.slider-section
+        .slider-section__wrapper(style="background-image: url(../src/blocks/slider-section/assets/img/slider3.jpg)")
+            .layout.layout--large
+                .heading.heading--center.heading--white
+                    .heading__title High precision results for various use cases
+                .slider-section__main
+                    .slider-section__item
+                        .slider-section__title
+                            h3 eCom#[br] stores
+                        .slider-section__desc
+                            p This is some description text and then some more description text, followed by further description text and some more.
+                    .slider-section__item
+                        .slider-section__title
+                            h3 Interior Design
+                        .slider-section__desc
+                            p Apply various kinds of digital materials to your interior design products, consistently using real-life textures on your 3d models.
+                .slider-section__navigate
+
+    .section.section--offset-top
+        .layout.layout--large
+            .heading.heading--offset-small
+                .heading__title The xTex™ Software
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper.content-default__wrapper--revers
+                .content-default__item.content-default__item--5
+                    +contentDefault("content-default__offset-left")
+                        h4.post__subtitle xTex™ Software
+                        h3.content-default__title Tile
+                        p.content-default__desc Best in class tiling algorithms: Use the most elaborate tools to create seamless textures. You can select between 3 different algorithms to achieve the best possible result for any use case.
+                        p.content-default__desc With Synthesis and Pattern Recognition you can even customize the output size and create large textures from small samples.
+
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image7.jpg")
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper
+                .content-default__item.content-default__item--5
+                    +contentDefault()
+                        h4.post__subtitle xTex™ Software
+                        h3.content-default__title Color-up
+                        p.content-default__desc You have different color variations of one material? No need to scan them seperately – with xTex you can easily recolor your materials.
+                        p.content-default__desc Our recoloring tool automatically detects the colors in the image.
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image8.jpg")
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper.content-default__wrapper--revers
+                .content-default__item.content-default__item--5
+                    +contentDefault("content-default__offset-left")
+                        h4.post__subtitle Physical measurements
+                        h3.content-default__title Analyze
+                        p.content-default__desc Capture depth data, to optimize digital folding of fabrics. Capture depth data, to optimize digital folding of fabrics. Capture depth data, to optimize digital folding of fabrics. Capture depth data, to optimize digital folding of fabrics.
+
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image9.jpg")
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper
+                .content-default__item.content-default__item--5
+                    +contentDefault()
+                        h4.post__subtitle U3M - Unified 3D Material
+                        h3.content-default__title Share
+                        p.content-default__desc Capture depth data, to optimize digital folding of fabrics. Capture depth data, to optimize digital folding of fabrics. Capture depth data, to optimize digital folding of fabrics. Capture depth data, to optimize digital folding of fabrics.
+                        a(href="#").post__link Visit u3m.info for details
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image10.jpg")
+
+    .section.section__full-offset
+        .layout.layout--large
+            .heading.heading--center.heading--offset-large
+                .heading__title Comparing the xTex™ workflows
+            .table__wrapper
+                .table
+                    .table__head
+                        .table__row
+                            .table__col
+                            .table__col Basic
+                            .table__col.table__col--active Professional
+                            .table__col Enterprise
+                    .table__body
+                        .table__row
+                            .table__col Color calibration
+                            .table__col
+                                span.icon-dash
+                            .table__col.table__col--active
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Drape verification
+                            .table__col
+                                span.icon-dash
+                            .table__col.table__col--active
+                                span.icon-dash
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Color verification workflow
+                            .table__col
+                                span.icon-dash
+                            .table__col.table__col--active
+                                span.icon-dash
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col U3M format
+                            .table__col
+                                span.icon-check
+                            .table__col.table__col--active
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Tiling
+                            .table__col
+                                span.icon-check
+                            .table__col.table__col--active
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col PBR textures (physically correct)
+                            .table__col
+                                span.icon-dash
+                            .table__col.table__col--active
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Correct transparency
+                            .table__col
+                                span.icon-check
+                            .table__col.table__col--active
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+                        .table__row
+                            .table__col Upgradability
+                            .table__col
+                                span.icon-check
+                            .table__col.table__col--active
+                                span.icon-check
+                            .table__col
+                                span.icon-check
+
+    section.section.section__full-offset
+        .layout.layout--large
+            .heading.heading--center
+                .heading__title Choose what is right for you
+            .product-circle__wrapper
+                .product-circle__item
+                    +productCircle("../src/blocks/product-circle/assets/img/product-circle4.jpg", "Basic workflow")
+                .product-circle__item
+                    +productCircle("../src/blocks/product-circle/assets/img/product-circle5.jpg", "Professional workflow ")
+                .product-circle__item
+                    +productCircle("../src/blocks/product-circle/assets/img/product-circle6.jpg", "Enterprise workflow")
+
+    +footer()
+        | What’s the best choice for you?#[br] Contact us for individual offers.

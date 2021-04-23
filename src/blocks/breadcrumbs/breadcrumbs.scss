@@ -1,0 +1,48 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 10px;
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      &:before {
+        min-width: 4px;
+        min-height: 4px;
+        display: inline-block;
+        content: '';
+        background: #FFFFFF;
+        margin-right: 10px;
+      }
+    }
+
+    &:first-child {
+
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:hover a {
+      color: #5edaf1;
+    }
+  }
+
+  a {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--green-color);
+    @include trn(.2s);
+  }
+
+}

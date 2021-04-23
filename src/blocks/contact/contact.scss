@@ -14,6 +14,7 @@
     width: 100%;
     margin-bottom: 20px;
   }
+
   &__br {
     @include offset(margin-bottom, 0px, 60px, 768px, 1024px);
   }
@@ -23,8 +24,8 @@
 @include grid(contact__col);
 
 [class*='contact__col-'] {
-@include mobile-large-screen {
-  width: 100%;
-}
+  @include mobile-large-screen {
+    width: 100%;
+  }
 }
 

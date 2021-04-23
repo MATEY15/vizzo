@@ -49,14 +49,25 @@
         width: 100%;
       }
     }
+
+    &--6 {
+      @include col(6);
+      @include mobile-big-screen {
+        width: 100%;
+      }
+    }
   }
 
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #002b2b;
+    margin-bottom: 20px;
+  }
   &__title {
     @include fr();
     @include offset(font-size, 28px, 40px, 768px, 1024px);
     @include offset(font-size, 37px, 47px, 768px, 1024px);
-    //font-size: 40px;
-    //line-height: 47px;
     font-weight: 500;
     letter-spacing: .2px;
     color: #002b2b;
@@ -76,3 +87,5 @@
     color: var(--green-color);
   }
 }
+
+//@include grid(content-default__item-);

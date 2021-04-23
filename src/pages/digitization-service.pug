@@ -1,0 +1,76 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/content-default/content-default
+include ../blocks/image-default/image-default
+include ../blocks/content-section/content-section
+include ../blocks/product-circle/product-circle
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/header-content/assets/img/header-background7.jpg")
+        ul.breadcrumbs
+            +listBreadcrumbs("Solutions")
+        h1.header-content__title Digitization#[br] technology
+        p.header-content__desc We are proud to offer versatile digitization services that are fast and reliable for material loads up to 5000 samples.
+
+    .section.section--offset-top
+        .layout.layout--large
+            .heading.heading--offset-small
+                .heading__title We offer on-demand digitzation of your materials
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper.content-default__wrapper--revers
+                .content-default__item.content-default__item--5
+                    +contentDefault("content-default__offset-left")
+                        h3.content-default__title The title of the module
+                        p.content-default__desc This is some description text and then some more description text, followed by further description text and some more. This is some text, then some more description text, followed by further description text and some more.
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper
+                .content-default__item
+                    +contentDefault()
+                        h3.content-default__title The title of the module
+                        p.content-default__desc This is some description text and then some more description text, followed by further description text and some more. This is some text, then some more description text, followed by further description text and some more.
+                .content-default__item
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper.content-default__wrapper--revers
+                .content-default__item.content-default__item--5
+                    +contentDefault("content-default__offset-left")
+                        h3.content-default__title The title of the module
+                        p.content-default__desc This is some description text and then some more description text, followed by further description text and some more. This is some text, then some more description text, followed by further description text and some more.
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
+
+    section.slider-section
+        .slider-section__wrapper(style="background-image: url(../src/blocks/slider-section/assets/img/slider3.jpg)")
+            .layout.layout--large
+                .heading.heading--center.heading--white
+                    .heading__title High precision results for various use cases
+                .slider-section__main
+                    .slider-section__item
+                        .slider-section__title
+                            h3 eCom#[br] stores
+                        .slider-section__desc
+                            p This is some description text and then some more description text, followed by further description text and some more.
+                    .slider-section__item
+                        .slider-section__title
+                            h3 Interior Design
+                        .slider-section__desc
+                            p Apply various kinds of digital materials to your interior design products, consistently using real-life textures on your 3d models.
+                .slider-section__navigate
+
+    +footer()
+        | Let’s get in touch.

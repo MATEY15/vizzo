@@ -1,0 +1,6 @@
+mixin video(srcImg, linkVideo)
+    .video
+        .video__image-wrapper
+            +img(srcImg , "video__image", "Video image")
+            a(href=linkVideo).video__play.popup-youtube
+                +mixinSvg("18px", "26px", "video-play", "video__play-icon")

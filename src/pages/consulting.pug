@@ -1,0 +1,71 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/content-section/content-section
+include ../blocks/post/post
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/header-content/assets/img/header-background3.jpg")
+        h4.header-content__slogan Stories
+        h1.header-content__title How businesses #[br] benefit from Vizoo
+        p.header-content__desc A short page description in a few lines of text. A short page description in a few lines of text.
+
+    section.section.section--offset-top
+        .layout.layout--large
+            .heading.heading--offset-small
+                .heading__title Case studies, news and events
+            .menu-page.menu-page--center
+                +listLink("Case studies", "#")
+                +listLink("News", "#")
+                +listLink("Events", "#")
+
+            .post__wrapper
+                +postFull("../src/blocks/post/assets/img/post1.jpg")
+                    h4.post__subtitle Case study
+                    h3.post__title The adidas story
+                    p.post__text The trend for fashion brands is using CAD to create product concepts and to visualize their materials.
+                    a(href="#").post__link Check out the adidas 3d design process
+
+                +postFull("../src/blocks/post/assets/img/post2.jpg")
+                    h4.post__subtitle Case study
+                    h3.post__title Deciding color patterns
+                    p.post__text This is the the description text, followed by more description text. This is the the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post("../src/blocks/post/assets/img/post3.jpg")
+                    h4.post__subtitle Event
+                    h3.post__title IFAI Expo 2021
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +postFull("../src/blocks/post/assets/img/post4.jpg")
+                    h4.post__subtitle Case study
+                    h3.post__title London Institute of Fashion
+                    p.post__text This is the the description text, followed by more description text. This is the the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post("../src/blocks/post/assets/img/post5.jpg")
+                    h4.post__subtitle Press release
+                    h3.post__title A new giant: The xTex™ A1
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post()
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +postFull("../src/blocks/post/assets/img/post6.jpg")
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    p.post__text This is the the description text, followed by more description text. This is the the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+    +footer()
+        | We've got even more to tell. Follow us.
