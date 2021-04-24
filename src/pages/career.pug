@@ -1,0 +1,84 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/content-section/content-section
+include ../blocks/content-default/content-default
+include ../blocks/image-default/image-default
+include ../blocks/post/post
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/content-section/assets/img/content-section7.jpg")
+        h1.header-content__title Become#[br] part of the team
+        p.header-content__desc Vizoo is a group of highly skilled people passionate about their job.
+
+    .section.section__full-offset
+        .layout.layout--large
+            .heading.heading--center.heading--offset-big
+                .heading__title Working at Vizoo
+            .content-default__container
+                .content-default__wrapper.content-default__wrapper--offset
+                    .content-default__item.content-default__item--6
+                        +contentDefault()
+                            .content-default__desc-content
+                                p Although we've grown quite a lot as a company since our founding days, we still managed to retain a very familiar and relaxed working environment.
+                                p Furthermore, while we definitely want to grow the company further, set up new locations and extend our product portfolio, maybe even with your help, our top priority is the well-being of our employees.
+                    .content-default__item.content-default__item--6
+                        +imageDefault("../src/blocks/content-default/assets/img/content-default--image13.jpg")
+
+                .content-default__wrapper.content-default__wrapper--offset.content-default__wrapper--revers
+                    .content-default__item.content-default__item--6
+                        +contentDefault("content-default__offset-left")
+                            .content-default__desc-content
+                                p Although we've grown quite a lot as a company since our founding days, we still managed to retain a very familiar and relaxed working environment.
+                                p Furthermore, while we definitely want to grow the company further, set up new locations and extend our product portfolio, maybe even with your help, our top priority is the well-being of our employees.
+                    .content-default__item.content-default__item--6
+                        +imageDefault("../src/blocks/content-default/assets/img/content-default--image12.jpg")
+
+    section.section.section--offset-top
+        .layout.layout--large
+            .heading.heading--offset-small
+                .heading__title Our current job openings
+            .menu-page.menu-page--center
+                +listLink("IT", "#")
+                +listLink("Design", "#")
+                +listLink("Admin", "#")
+
+            .post__wrapper
+
+                +post("../src/blocks/post/assets/img/post7.jpg")
+                    h4.post__subtitle IT, full-time in Munich, Germany
+                    h3.post__title Senior IT Manager (f/m/d)
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link Job description
+
+                +post()
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post()
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post()
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post()
+                    h4.post__subtitle Label name
+                    h3.post__title Title of this module
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+    +footer()
+        | Not the right job for you? Inspire us.

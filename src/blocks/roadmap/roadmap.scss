@@ -1,0 +1,71 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+$circle: ".roadmap__item-circle";
+
+.roadmap {
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #002b2b;
+    font-size: 18px;
+    @include mobile-large-screen {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 30px;
+
+      #{$circle} {
+        &:before {
+          position: absolute;
+          left: 50%;
+          top: 100%;
+          width: 1px;
+          height: 30px;
+          content: '';
+          @include tt(-50%, 0);
+          background: #859ea3;
+          @include mobile-large-screen {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__item-year {
+    margin-right: 24px;
+    @include mobile-large-screen {
+      margin-right: 20px;
+    }
+  }
+
+  &__item-circle {
+    position: relative;
+    width: 75px;
+    min-width: 75px;
+    height: 75px;
+    border: 1px solid #859ea3;
+    @include brr(50%);
+    @include mobile-large-screen {
+      width: 50px;
+      min-width: 50px;
+      height: 50px;
+    }
+    @include mobile-small-screen {
+      width: 25px;
+      min-width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__item-content {
+    margin-left: 26px;
+    @include mobile-large-screen {
+      margin-left: 22px;
+    }
+  }
+}

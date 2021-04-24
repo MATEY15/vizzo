@@ -1,0 +1,80 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/content-section/content-section
+include ../blocks/content-default/content-default
+include ../blocks/image-default/image-default
+include ../blocks/post/post
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/header-content/assets/img/header-background5.jpg")
+        h1.header-content__title Our technology partners
+        p.header-content__desc Creating a smooth creation pipeline is essential when scaling your 3D process.
+
+    .section.section__full-offset
+        .layout.layout--large
+            .heading.heading--center.heading--offset-big
+                .heading__title Seamless integration in your technology landscape
+            .content-default__wrapper
+                .content-default__item.content-default__item--6
+                    +contentDefault()
+                        .content-default__desc-content
+                            p Format compatibility: our U3M format is widely adopted in the industry. Based on the PBR shading standard the U3M files holding visual and physical data and enable our clients to not only share between tools but between companies.
+                            p integrations to various tools help our users to directly send the materials where they are stored (DAM, PLM) or where they are used (3D program).
+                .content-default__item.content-default__item--6
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
+
+    section.section.section--offset-top
+        .layout.layout--large
+            .heading.heading--offset-small
+                .heading__title Our technology partners
+            .menu-page.menu-page--center
+                +listLink("Agency", "#")
+                +listLink("Apparel", "#")
+                +listLink("Footwear", "#")
+                +listLink("PLM", "#")
+
+            .post__wrapper
+                +post("../src/blocks/post/assets/img/post-icon2.png", "post--offset-small", "post__image--small")
+                    h4.post__subtitle Service and Technology
+                    h3.post__title Tronog
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post("../src/blocks/post/assets/img/post-icon3.png", "post--offset-small", "post__image--small")
+                    h4.post__subtitle Service and Technology
+                    h3.post__title Tronog
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post("../src/blocks/post/assets/img/post-icon2.png", "post--offset-small", "post__image--small")
+                    h4.post__subtitle Service and Technology
+                    h3.post__title Tronog
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post("../src/blocks/post/assets/img/post-icon3.png", "post--offset-small", "post__image--small")
+                    h4.post__subtitle Service and Technology
+                    h3.post__title Tronog
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post("../src/blocks/post/assets/img/post-icon2.png", "post--offset-small", "post__image--small")
+                    h4.post__subtitle Service and Technology
+                    h3.post__title Tronog
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+                +post("../src/blocks/post/assets/img/post-icon3.png", "post--offset-small", "post__image--small")
+                    h4.post__subtitle Service and Technology
+                    h3.post__title Tronog
+                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
+                    a(href="#").post__link A link to somewhere
+
+    +footer()
+        | Interested in teaming up?

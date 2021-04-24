@@ -43,6 +43,7 @@
   &--preview {
     border: 1px solid #859ea3;
     color: #002b2b;
+    overflow: hidden;
 
     @include mobile-big-screen {
       flex-direction: column-reverse;
@@ -123,5 +124,9 @@
     font-size: 18px;
     font-weight: 500;
     color: #00bfbf;
+    @include trn(.2s);
+    &:hover {
+      color: #5edaf1;
+    }
   }
 }

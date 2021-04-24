@@ -1,0 +1,13 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+._list-page {
+  list-style: none;
+  &__li {
+    margin-bottom: 14px;
+  }
+  &__link {
+
+  }
+}

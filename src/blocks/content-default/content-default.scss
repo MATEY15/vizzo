@@ -25,6 +25,17 @@
       flex-direction: column-reverse;
     }
 
+    &--offset {
+      @include offset(padding-top, 30px, 100px, 768px, 1024px);
+      @include offset(padding-bottom, 30px, 100px, 768px, 1024px);
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
     &--revers {
       flex-direction: row-reverse;
       @include mobile-big-screen {
@@ -74,11 +85,18 @@
     margin-bottom: 30px;
   }
 
+  p {
+    font-size: 18px;
+    color: #002b2b;
+    margin-bottom: 20px;
+    max-width: 400px;
+  }
+
   &__desc {
     font-size: 18px;
     color: #002b2b;
     margin-bottom: 20px;
-    max-width: 300px;
+    max-width: 300px !important;
   }
 
   a {

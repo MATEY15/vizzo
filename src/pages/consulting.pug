@@ -1,8 +1,11 @@
 extends ../templates/main
 
 include ../blocks/header-content/header-content
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/content-default/content-default
+include ../blocks/image-default/image-default
 include ../blocks/content-section/content-section
-include ../blocks/post/post
+include ../blocks/product-circle/product-circle
 include ../blocks/footer/footer
 
 block variables
@@ -10,62 +13,77 @@ block variables
 
 
 block content
-    +headerContent("../src/blocks/header-content/assets/img/header-background3.jpg")
-        h4.header-content__slogan Stories
-        h1.header-content__title How businesses #[br] benefit from Vizoo
-        p.header-content__desc A short page description in a few lines of text. A short page description in a few lines of text.
+    +headerContent("../src/blocks/content-section/assets/img/content-section2.jpg")
+        ul.breadcrumbs
+            +listBreadcrumbs("Solutions")
+        h1.header-content__title Consulting
+        p.header-content__desc We are leading experts in material digitzation technology and would love to guide you through the digital transformation of your business.
 
-    section.section.section--offset-top
+    .section.section--offset-top
         .layout.layout--large
             .heading.heading--offset-small
-                .heading__title Case studies, news and events
-            .menu-page.menu-page--center
-                +listLink("Case studies", "#")
-                +listLink("News", "#")
-                +listLink("Events", "#")
+                .heading__title We guide your digital transformation
 
-            .post__wrapper
-                +postFull("../src/blocks/post/assets/img/post1.jpg")
-                    h4.post__subtitle Case study
-                    h3.post__title The adidas story
-                    p.post__text The trend for fashion brands is using CAD to create product concepts and to visualize their materials.
-                    a(href="#").post__link Check out the adidas 3d design process
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper.content-default__wrapper--revers
+                .content-default__item.content-default__item--5
+                    +contentDefault("content-default__offset-left")
+                        h3.content-default__title The title of the module
+                        p.content-default__desc This is some description text and then some more description text, followed by further description text and some more. This is some text, then some more description text, followed by further description text and some more.
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
 
-                +postFull("../src/blocks/post/assets/img/post2.jpg")
-                    h4.post__subtitle Case study
-                    h3.post__title Deciding color patterns
-                    p.post__text This is the the description text, followed by more description text. This is the the description text, followed by more description text. This is the the description text, followed by more description text.
-                    a(href="#").post__link A link to somewhere
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper
+                .content-default__item
+                    +contentDefault()
+                        h3.content-default__title The title of the module
+                        p.content-default__desc This is some description text and then some more description text, followed by further description text and some more. This is some text, then some more description text, followed by further description text and some more.
+                .content-default__item
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
 
-                +post("../src/blocks/post/assets/img/post3.jpg")
-                    h4.post__subtitle Event
-                    h3.post__title IFAI Expo 2021
-                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
-                    a(href="#").post__link A link to somewhere
+    section.slider-section
+        .slider-section__wrapper(style="background-image: url(../src/blocks/slider-section/assets/img/slider2.jpg)")
+            .layout.layout--large
+                .heading.heading--center.heading--white
+                    .heading__title How businesses benefit from Vizoo
+                .slider-section__main
+                    .slider-section__item
+                        .slider-section__title
+                            h3 The adidas story
+                        .slider-section__desc
+                            p The trend for fashion brands is using CAD to create product concepts and to visualize their materials.
+                            a(href="#") Check out the adidas 3d design process
+                    .slider-section__item
+                        .slider-section__title
+                            h3 Interior Design
+                        .slider-section__desc
+                            p Apply various kinds of digital materials to your interior design products, consistently using real-life textures on your 3d models.
+                .slider-section__navigate
 
-                +postFull("../src/blocks/post/assets/img/post4.jpg")
-                    h4.post__subtitle Case study
-                    h3.post__title London Institute of Fashion
-                    p.post__text This is the the description text, followed by more description text. This is the the description text, followed by more description text. This is the the description text, followed by more description text.
-                    a(href="#").post__link A link to somewhere
-
-                +post("../src/blocks/post/assets/img/post5.jpg")
-                    h4.post__subtitle Press release
-                    h3.post__title A new giant: The xTex™ A1
-                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
-                    a(href="#").post__link A link to somewhere
-
-                +post()
-                    h4.post__subtitle Label name
-                    h3.post__title Title of this module
-                    p.post__text This is the the description text, followed by more description text. This is description text and the description text, followed by more description text. This is the the description text, followed by more description text.
-                    a(href="#").post__link A link to somewhere
-
-                +postFull("../src/blocks/post/assets/img/post6.jpg")
-                    h4.post__subtitle Label name
-                    h3.post__title Title of this module
-                    p.post__text This is the the description text, followed by more description text. This is the the description text, followed by more description text. This is the the description text, followed by more description text.
-                    a(href="#").post__link A link to somewhere
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper
+                .content-default__item.content-default__item--5
+                    +contentDefault()
+                        h3.content-default__title Scan
+                        p.content-default__desc The xTex™ scanner captures materials with unmatched accuracy and speed and is availble in two sizes: A4 and A2.
+                        a(href="#").link See technical specification (pdf)
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image1.jpg")
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__wrapper.content-default__wrapper--revers
+                .content-default__item.content-default__item--5
+                    +contentDefault("content-default__offset-left")
+                        h3.content-default__title Material digitization service
+                        p.content-default__desc We are proud to offer versatile digitization services that are fast and reliable for material loads up to 5000 samples.
+                        a(href="#").link Learn about our digitzation service
+                .content-default__item.content-default__item--7
+                    +imageDefault("../src/blocks/content-default/assets/img/content-default--image2.jpg")
+                        img(src="../src/blocks/content-default/assets/img/content-default--image2-1.jpg" alt="Image Preview").image-default__img.image-default__img--absolute
 
     +footer()
-        | We've got even more to tell. Follow us.
+        | Let’s get in touch.

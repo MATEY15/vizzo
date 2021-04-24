@@ -35,6 +35,10 @@
     a {
       font-size: 18px;
       color: #00bfbf;
+      @include trn(.2s);
+      &:hover {
+        color: #5edaf1;
+      }
     }
   }
 }

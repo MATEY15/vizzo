@@ -1,0 +1,59 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/content-section/content-section
+include ../blocks/post/post
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/header-content/assets/img/header-background10.jpg")
+        h1.header-content__title Senior IT Manager (f/m/d)
+        p.header-content__desc This is the the description text, followed by more description text. This is description text and the description text, followed by more description text.
+
+    section.section.section--offset-top
+        .layout.layout--large
+            .heading.heading--offset-big
+                .heading__title Job description
+
+            .page-content
+                h3 What we are looking for
+                p We are looking for a Senior IT Project Manager for the management of our IT projects in the area of material digitization. You will be working with a fast growing and diverse development team to create and maintain products according to the companies vision and strategy. If you like working with and coordinating a friendly team, Jira & Confluence are part of your daily tools and you enjoy creating products that will be used globally as a driver for digitalization, Vizoo is the right place for you.
+
+                h3 Roles and Responsibilities
+                ul
+                    li Being responsible for the delivery of all IT projects in terms of time, cost and quality
+                    li Introducing agile development and supporting tools to create a high performant, fast growing team
+                    li Introducing risk management and escalation processes
+                    li Collecting client or internal requirements, taking care of resource planning and setting of milestones and deadlines
+                    li Being responsible of aligning release cycles between all products
+                    li Supporting the C-level management with the product strategy planning
+                    li Being responsible for the implementation of the product strategy
+
+                h3 You will bring
+                ul
+                    li Studies in Business Informatics, Business Administration or a similar qualification
+                    li A minimum 5 years working experience in a IT project management position, where you ideally worked with agile development and tools (e.g. Jira, Confluence, etc)
+                    li Very good unterstanding of IT processes & architecture
+                    li Experience with leading teams across multiple projects
+                    li Strong communication, collaboration and presentation skills, fluent in English (German is a plus)
+                    li Prior experience in 3D processes in the Fashion, Automotive or Furniture industry is a plus.
+
+                h3 What we offer
+                ul
+                    li Participating in the creation of our products that are utilized globally, with you directly able to apply your own ideas
+                    li Flexible working hours, adjustable to your lifestyle
+                    li Working in a dedicated, international and diverse team
+                    li Free coffee, drinks, and petting the office dog
+
+                p If you are interested, please apply now with your cv and application letter.
+
+                .page-content__button
+                    a(href="#").button.button--border Apply now
+                    a(href="#").link Share job posting
+
+    +footer()
+        | Want to know more about Vizoo? Follow us.

@@ -1,0 +1,50 @@
+extends ../templates/main
+
+include ../blocks/header-content/header-content
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/content-default/content-default
+include ../blocks/image-default/image-default
+include ../blocks/content-section/content-section
+include ../blocks/product-circle/product-circle
+include ../blocks/footer/footer
+
+block variables
+    - var title = 'VIZZO'
+
+
+block content
+    +headerContent("../src/blocks/header-content/assets/img/header-background11.jpg")
+        h1.header-content__title Together we are#[br] transforming the#[br] industry
+        p.header-content__desc We are united by our passion for 3D in general and material visualization in particular.
+
+    .height100
+
+    .section.section__full-offset
+        .layout.layout--large
+            .content-default__container
+                .content-default__wrapper.content-default__wrapper--offset
+                    .content-default__item
+                        +contentDefault()
+                            h3.content-default__title Technology partners
+                            p.content-default__desc Materials are one part of the 3D creation workflow. We have formed strategic partnerships with industry leading solution providers in the 3D CAD, PLM and visualisation area to streamline your process.
+                            a(href="#").link Explore who is with us on this journey
+                    .content-default__item
+                        +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
+
+                .content-default__wrapper.content-default__wrapper--offset.content-default__wrapper--revers
+                    .content-default__item
+                        +contentDefault("content-default__offset-left")
+                            h3.content-default__title Academic partners
+                            p.content-default__desc Education requires the right tools to train students in technology which is demanded in the industry. Join our group of innovative academic partners who work with us.
+                            a(href="#").link See how we work with universities
+                    .content-default__item
+                        +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
+
+    +content-section("../src/blocks/content-section/assets/img/content-section8.jpg")
+        h3 Official Distributors
+        p A close relationship with our customers means a lot to us. Our official resellers provide local purchasing options and product support.
+        p
+            a(href="#") List our world wide resellers
+
+    +footer()
+        | Interested in teaming up?

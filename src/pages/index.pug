@@ -1,43 +1,61 @@
 extends ../templates/main
 
 include ../blocks/content-section/content-section
+include ../blocks/content-default/content-default
+include ../blocks/image-default/image-default
 include ../blocks/footer/footer
 
 block variables
     - var title = 'VIZZO'
 
 block content
-    .animate-wrapper#animate-wrapper
-        include ../blocks/preview-materials/preview-materials
-        include ../blocks/tab-materials/tab-materials
+    include ../blocks/_list-page/_list-page
 
-        section.third-scroll-section
-            include ../blocks/slider-section/slider-section
-            section.slider-section
-                .slider-section__wrapper(style="background-image: url(../src/blocks/slider-section/assets/img/slider2.jpg)")
-                    .layout.layout--large
-                        .heading.heading--center.heading--white
-                            .heading__title How our clients benefit from xTex#[sup ™]
-                        .slider-section__main
-                            .slider-section__item
-                                .slider-section__title
-                                    h3 The adidas story
-                                .slider-section__desc
-                                    p The trend for fashion brands is using CAD to create product concepts and to visualize their materials.
-                                    a(href="#") Check out the adidas 3d design process
-                            .slider-section__item
-                                .slider-section__title
-                                    h3 Interior Design
-                                .slider-section__desc
-                                    p Apply various kinds of digital materials to your interior design products, consistently using real-life textures on your 3d models.
-                        .slider-section__navigate
-            include ../blocks/clients/clients
-            +content-section("../src/blocks/content-section/assets/img/content-section1.jpg", "className")
-                h3 Start #[br] digitizing
-                p From services to on-site solutions, we have a digitization process that will work for you.
-                p
-                    a(href="#") See our solutions
-                p Please contact us for a tailored system quote.
-                a(href="#").button.button--border Get in touch
-            +footer()
-                //| Ready to start your 3D journey? Follow us.
+    .section.section__full-offset
+        .layout.layout--large
+            .heading.heading--center.heading--offset-big
+                .heading__title Posts Example
+            .content-default__container
+                .content-default__wrapper.content-default__wrapper--offset
+                    .content-default__item.content-default__item--6
+                        +contentDefault()
+                            .content-default__desc-content
+                                p Although we've grown quite a lot as a company since our founding days, we still managed to retain a very familiar and relaxed working environment.
+                                p Furthermore, while we definitely want to grow the company further, set up new locations and extend our product portfolio, maybe even with your help, our top priority is the well-being of our employees.
+                    .content-default__item.content-default__item--6
+                        +imageDefault("../src/blocks/content-default/assets/img/content-default--image13.jpg")
+
+                .content-default__wrapper.content-default__wrapper--offset.content-default__wrapper--revers
+                    .content-default__item.content-default__item--6
+                        +contentDefault("content-default__offset-left")
+                            .content-default__desc-content
+                                p Although we've grown quite a lot as a company since our founding days, we still managed to retain a very familiar and relaxed working environment.
+                                p Furthermore, while we definitely want to grow the company further, set up new locations and extend our product portfolio, maybe even with your help, our top priority is the well-being of our employees.
+                    .content-default__item.content-default__item--6
+                        +imageDefault("../src/blocks/content-default/assets/img/content-default--image12.jpg")
+
+                .content-default__wrapper.content-default__wrapper--offset
+                    .content-default__item
+                        +contentDefault()
+                            h3.content-default__title The title of the module
+                            p.content-default__desc This is some description text and then some more description text, followed by further description text and some more. This is some text, then some more description text, followed by further description text and some more.
+                    .content-default__item
+                        +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
+
+                .content-default__wrapper.content-default__wrapper--offset.content-default__wrapper--revers
+                    .content-default__item.content-default__item--5
+                        +contentDefault("content-default__offset-left")
+                            h3.content-default__title The title of the module
+                            p.content-default__desc This is some description text and then some more description text, followed by further description text and some more. This is some text, then some more description text, followed by further description text and some more.
+                    .content-default__item.content-default__item--7
+                        +imageDefault("../src/blocks/content-default/assets/img/content-default--image11.jpg")
+
+    +content-section("../src/blocks/content-section/assets/img/content-section1.jpg", "className")
+        h3 Start #[br] digitizing
+        p From services to on-site solutions, we have a digitization process that will work for you.
+        p
+            a(href="#") See our solutions
+        p Please contact us for a tailored system quote.
+        a(href="#").button.button--border Get in touch
+    +footer()
+        | Footer

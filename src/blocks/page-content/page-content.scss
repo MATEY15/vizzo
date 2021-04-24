@@ -1,0 +1,58 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.page-content {
+  color: #002b2b;
+
+  h3 {
+    @include offset(font-size, 22px, 28px, 768px, 1024px);
+    font-weight: 500;
+    letter-spacing: 0.14px;
+    @include offset(margin-bottom, 20px, 50px, 768px, 1024px);
+  }
+
+  p {
+    @include offset(font-size, 16px, 18px, 768px, 1024px);
+    min-height: 1px;
+    @include offset(margin-bottom, 20px, 50px, 768px, 1024px);
+  }
+
+  ul{
+    @include offset(margin-bottom, 20px, 50px, 768px, 1024px);
+    li {
+      position: relative;
+      @include offset(font-size, 16px, 18px, 768px, 1024px);
+      padding-left: 36px;
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      @include mobile-large-screen {
+        padding-left: 20px;
+      }
+      &:before {
+        position: absolute;
+        top: 9px;
+        left: 10px;
+        width: 4px;
+        height: 4px;
+        content: "";
+        @include brr(50%);
+        background: #002b2b;
+        display: block;
+        @include mobile-large-screen {
+          left: 5px;
+          top: 7px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    a {
+      &:not(:last-child) {
+        @include offset(margin-right, 20px, 40px, 768px, 1024px);
+      }
+    }
+  }
+}
