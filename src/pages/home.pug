@@ -1,6 +1,7 @@
 extends ../templates/main
 
 include ../blocks/content-section/content-section
+include ../blocks/content-default/content-default
 include ../blocks/footer/footer
 
 block variables
@@ -13,6 +14,8 @@ block content
 
         section.third-scroll-section
             include ../blocks/slider-section/slider-section
+            include ../blocks/materials-gallery/materials-gallery
+
             section.slider-section
                 .slider-section__wrapper(style="background-image: url(../src/blocks/slider-section/assets/img/slider2.jpg)")
                     .layout.layout--large

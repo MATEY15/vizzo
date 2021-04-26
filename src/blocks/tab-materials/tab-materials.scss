@@ -3,6 +3,7 @@
 @import "../../blocks/base/media-queries";
 
 .tab-materials {
+  perspective: 1000px;
   //@include offset(padding-top, 50px, 100px, 768px, 1024px);
   //@include offset(padding-bottom, 60px, 120px, 768px, 1024px);
 
@@ -22,6 +23,9 @@
     @include table-small-screen {
       margin-right: 25px;
     }
+    @include mobile-small-screen {
+      margin-right: 15px;
+    }
   }
 
   &__list {
@@ -36,6 +40,12 @@
     cursor: pointer;
     @include trn(.2s);
 
+    @include mobile-small-screen {
+      font-size: 14px;
+      font-weight: 500;
+      padding-right: 8px;
+    }
+
     &:before {
       position: absolute;
       top: 0;
@@ -47,6 +57,9 @@
       @include trn(.2s);
       opacity: 0;
       visibility: hidden;
+      @include mobile-small-screen {
+        width: 3px;
+      }
     }
 
     &:hover {
@@ -72,6 +85,10 @@
   &__slider {
     position: relative;
     width: 100%;
+    transform-style: preserve-3d;
+    @include mobile-small-screen {
+      width: calc(100% - 35px);
+    }
   }
 
   &__slider-item {
@@ -80,23 +97,24 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    @include trn(.25s);
     opacity: 0;
     visibility: hidden;
-    transform: translateX(80px);
+    transition: all .5s cubic-bezier(0.72, 0.15, 0.41, 0.79);
+    transform: translateZ(-200px) translateY(-360px) rotateX(55deg);
 
     @include table-small-screen {
       flex-direction: column;
     }
 
     &--effect {
-      transform: translateX(-80px);
+      transform: translateZ(-200px) translateY(360px) rotateX(-45deg) !important;
+      opacity: 0 !important;
     }
 
     &--active {
       opacity: 1;
       visibility: visible;
-      transform: translateX(0px);
+      transform: translateZ(0) translateY(0) rotateX(0deg);
       @include table-small-screen {
         position: relative;
       }
@@ -120,6 +138,11 @@
     p {
       font-size: 18px;
       max-width: 190px;
+      margin-bottom: 20px;
+    }
+    a {
+      font-size: 18px;
+      color: #00bfbf;
     }
   }
 

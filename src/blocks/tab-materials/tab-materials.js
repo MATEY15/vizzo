@@ -27,11 +27,15 @@ function sliderMaterials() {
         });
         $itemSlide.forEach((element) => {
             element.classList.remove(itemSlideActiveClass);
+            element.classList.remove("tab-materials__slider-item--effect");
         });
     }
 
     function showSlide(index) {
         $itemTab[index].classList.add(tabActiveClass);
+        if(index - 1 !== -1) {
+            $itemSlide[index - 1].classList.add("tab-materials__slider-item--effect");
+        }
         $itemSlide[index].classList.add(itemSlideActiveClass);
     }
 }

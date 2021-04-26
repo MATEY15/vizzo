@@ -14,7 +14,8 @@ function customScroll() {
         let $thirdScrollSection = document.querySelector('.third-scroll-section');
         let $header = document.querySelector('.header');
         positions[0] = parseInt(offset($firstSection).top + $firstSection.getBoundingClientRect().height - pageYOffset - $header.getBoundingClientRect().height);
-        positions[1] = parseInt(positions[0] + $secondSection.getBoundingClientRect().height);
+        // positions[1] = parseInt(positions[0] + $secondSection.getBoundingClientRect().height);
+        positions[1] = 3000;
         document.body.style.height = (positions[0] + positions[1] + $thirdScrollSection.getBoundingClientRect().height) + 90 + "px";
     }
 

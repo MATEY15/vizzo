@@ -11,18 +11,4 @@
     padding: 0 10px;
   }
 }
-
-//// Grid
-//
-//$columnGrid: 12;
-//
-//@mixin grid($name) {
-//
-//  @for $i from 1 through $columnGrid {
-//    .#{$name}-#{$i} {
-//      width: calc(100% / #{$columnGrid} * #{$i});
-//    }
-//  }
-//}
-//
-//@include grid(colm);
+@include grid(my-col);

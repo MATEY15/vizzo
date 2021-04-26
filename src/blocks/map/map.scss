@@ -1,0 +1,13 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.map {
+  min-height: 300px;
+  width: 100%;
+  @include offset(margin-bottom, 30px, 100px, 768px, 1024px);
+
+  &__wrapper {
+    width: 100%;
+  }
+}
